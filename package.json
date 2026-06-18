@@ -1,0 +1,32 @@
+{
+  "name": "BIM 3, ACTIVIDAD 2, Taller, Carlos Emilio Barahona Pasán",
+  "version": "1.0.0",
+  "description": "Segunda Tarea de Taller",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "Carlos Barahona",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^11.5.1",
+      "onFail": "download"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "@types/prompt-sync": "^4.2.3",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
