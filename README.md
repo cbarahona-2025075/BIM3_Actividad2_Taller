@@ -1,33 +1,47 @@
 # BIM3_Actividad2_Taller
 Proyecto de Typescript Básico con funciones para calcular subtotal, IVA y total de una compra realizada con datos ingresados manualmente por el usuario
 
-#Funcionalidad de las funciones
+# Organización del Proyecto
+El código está dividido en tres módulos según su responsabilidad:
+- `models/Producto.ts`: define la interfaz Producto y el enum CategoriaProducto.
+- `service/ProductoService.ts`: contiene la clase Productos con la lógica necesario (registro, cálculos).
+- `index.ts`: punto de entrada que instancia el servicio y ejecuta el flujo principal.
+
+# Funcionalidad de las funciones
+
 registrarProductos(): void
-Pide al usuario cuántos productos compró y luego, uno por uno solicita nombre, código, categoría y precio, validando cada dato antes de aceptarlo. Al final guarda todos los productos en la lista interna llamada listaDeProductos.
+Pide al usuario cuántos productos compró y luego, uno por uno solicita nombre, código, categoría y precio, validando cada dato antes de aceptarlo. Al final guarda todos los productos en la lista interna llamada listaDeProductos
 
 Parámetros: ninguno (lee todo desde la consola)
 Retorno: ninguno (void), su efecto es llenar listaDeProductos
 
 calcularSubtotal(): number
-Suma los precios de todos los productos que ya fueron registrados.
+Suma los precios de todos los productos que ya fueron registrados
 
 Parámetros: ninguno (usa listaDeProductos)
 Retorno: number — la suma total de los precios de los productos ingresados anteriormente
 
 calcularIVA(subtotal: number): number
-Calcula el IVA aplicando la tasa del 12% sobre el subtotal recibido.
+Calcula el IVA aplicando la tasa del 12% sobre el subtotal recibido
 
 Parámetros: subtotal — el subtotal ya calculado
 Retorno: number — el monto del IVA a pagar de la compra realizada
 
 calcularTotal(subtotal: number, IVA: number): number
-Suma el subtotal y el IVA para obtener el total final de la compra.
+Suma el subtotal y el IVA para obtener el total final de la compra
 
 Parámetros: subtotal y IVA — ambos ya calculados anteriormente
 Retorno: number — el monto total a pagar
 
 resultadoCompra(): void
-Llama en orden a calcularSubtotal, calcularIVA y calcularTotal y muestra en consola el listado de productos junto con el subtotal, IVA y total de la compra.
+Llama en orden a calcularSubtotal, calcularIVA y calcularTotal y muestra en consola el listado de productos junto con el subtotal, IVA y total de la compra
 
 Parámetros: ninguno
 Retorno: ninguno (void), su efecto es imprimir el resumen en consola
+
+# Pruebas y Conclusiones
+Se probó el sistema ingresando distintas cantidades de productos con precios variados 
+confirmando que el subtotal corresponde a la suma exacta de los precios ingresados, 
+que el IVA se calcula correctamente al 12% sobre el subtotal y que el total refleja 
+la suma de ambos. Los resultados fueron correctos en todos los casos probados.
+
